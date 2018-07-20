@@ -3,7 +3,7 @@ function attachUserMedia(videoElement) {
 		navigator.getUserMedia(
 			{audio : true, video : true, toString : function(){return "video, audio";}},
 			function(stream) {
-				videoElement.src = stream;
+				videoElement.srcObject = stream;
 			},
 			function(e) {
 				console.log(err);
